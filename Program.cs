@@ -6,6 +6,7 @@ namespace TernaryRattler
     {
         static void Main(string[] args)
         {
+            LocationList.HardList();
             bool keepGoing = true;
             do
             {
