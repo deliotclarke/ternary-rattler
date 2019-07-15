@@ -1,18 +1,20 @@
 using System;
+using System.Collections.Generic;
 
 namespace TernaryRattler
 {
     class Welcome
     {
+        LocationList LocationList = new LocationList();
 
-        static public bool RunWelcome()
+        public bool RunWelcome()
         {
             Console.Clear();
 
             Console.WriteLine("Hello World Traveller!");
             Console.WriteLine("Welcome to Ternary Rattler. What do you want to do?");
             Console.WriteLine();
-            Console.WriteLine("UPDATE your travel list, ADD to your travel list, VIEW your travel list?");
+            Console.WriteLine("UPDATE your travel list, ADD to your travel list, REMOVE a location from your travel list, or VIEW your travel list?");
             string userStart = Console.ReadLine();
 
             if (userStart.ToUpper() == "UPDATE")
@@ -22,12 +24,17 @@ namespace TernaryRattler
             }
             else if (userStart.ToUpper() == "ADD")
             {
-                AddLocation.AddNewLocation();
+                LocationList.AddNewLocation();
+                return true;
+            }
+            else if (userStart.ToUpper() == "REMOVE")
+            {
+                LocationList.DeleteList();
                 return true;
             }
             else if (userStart.ToUpper() == "VIEW")
             {
-                var printList = LocationList.ViewList();
+                var printList = LocationList.locations;
                 printList.ForEach(loc =>
                 {
                     Console.WriteLine();
@@ -38,7 +45,6 @@ namespace TernaryRattler
                 });
 
                 Console.WriteLine();
-                printList.Clear();
                 Console.WriteLine("All good?? Return to Main Menu?? y/n");
                 string returnResponse = Console.ReadLine();
 

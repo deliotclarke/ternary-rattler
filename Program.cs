@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TernaryRattler
 {
@@ -6,11 +7,11 @@ namespace TernaryRattler
     {
         static void Main(string[] args)
         {
-            LocationList.HardList();
+            Welcome welcome = new Welcome();
             bool keepGoing = true;
             do
             {
-                keepGoing = Welcome.RunWelcome();
+                keepGoing = welcome.RunWelcome();
             } while (keepGoing != false);
         }
     }
