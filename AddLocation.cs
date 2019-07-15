@@ -34,25 +34,25 @@ namespace TernaryRattler
                     Console.WriteLine();
                     Rattled = true;
                     Console.WriteLine("Daaaamn! That's nuts. Let's add it.");
-                    //LocationList.AddMe(locationName, locationState, Visited, Rattled);
-                    Console.WriteLine($"Add: {locationName}, {locationState}, Visited: {Visited}, Snaked: {Rattled}");
+                    LocationList.AddMe(locationName, locationState, Visited, Rattled);
+                    Console.WriteLine("Location... ADDED!");
 
                 }
-                else if (locationRattled.ToUpper() == "YES" || locationRattled.ToUpper() == "Y")
+                else if (locationRattled.ToUpper() == "NO" || locationRattled.ToUpper() == "N")
                 {
                     Console.WriteLine();
                     Rattled = false;
                     Console.WriteLine("OOF! That's probably best. Let's add it.");
-                    //LocationList.AddMe(locationName, locationState, Visited, Rattled);
-                    Console.WriteLine($"Add: {locationName}, {locationState}, Visited: {Visited}, Snaked: {Rattled}");
+                    LocationList.AddMe(locationName, locationState, Visited, Rattled);
+                    Console.WriteLine("Location... ADDED!");
                 }
             }
             else if (locationVisited.ToUpper() == "NO" || locationVisited.ToUpper() == "NOPE" || locationVisited.ToUpper() == "N")
             {
                 Console.WriteLine();
                 Console.WriteLine("That's cool. Let's put it on the list.");
-                // LocationList.AddMe(locationName, locationState, Visited, Rattled);
-                Console.WriteLine($"Add: {locationName}, {locationState}, Visited: {Visited}, Snaked: {Rattled}");
+                LocationList.AddMe(locationName, locationState, Visited, Rattled);
+                Console.WriteLine("Location... ADDED!");
             }
             else
             {

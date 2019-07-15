@@ -2,7 +2,7 @@ using System;
 
 namespace TernaryRattler
 {
-    class Location
+    public class Location
     {
         public string ParkName { get; set; }
         public string State { get; set; }
