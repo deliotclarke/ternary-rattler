@@ -196,7 +196,7 @@ namespace TernaryRattler
                 //removes old version of location
                 locations.Remove(item);
                 //adds new location object
-                locations.Add(newLocation);
+                locations.Insert(newSelector, newLocation);
             }
         }
 
@@ -244,6 +244,7 @@ namespace TernaryRattler
 
             if (userConfirmDelete.ToUpper() == "Y")
             {
+                //permanently removes item
                 locations.Remove(item);
             }
 
